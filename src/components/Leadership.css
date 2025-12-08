@@ -1,0 +1,84 @@
+.leadership-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.leadership-card {
+  background: var(--light-gray);
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 136, 0.1);
+  transition: all 0.3s ease;
+}
+
+.leadership-card:hover {
+  border-color: var(--green);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+}
+
+.leadership-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.leadership-role {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+
+.leadership-organization {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.leadership-period {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-style: italic;
+}
+
+.leadership-achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leadership-achievements li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.leadership-achievements li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .leadership-card {
+    padding: 1.5rem;
+  }
+
+  .leadership-role {
+    font-size: 1.2rem;
+  }
+
+  .leadership-organization {
+    font-size: 1rem;
+  }
+}
+

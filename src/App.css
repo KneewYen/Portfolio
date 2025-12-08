@@ -1,0 +1,23 @@
+.App {
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+}
+
+section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+  }
+}
+

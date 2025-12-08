@@ -1,0 +1,134 @@
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-content {
+  margin-top: 3rem;
+}
+
+.contact-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 3rem 0;
+  color: var(--gray);
+}
+
+.contact-divider::before,
+.contact-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.contact-divider span {
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--light-gray);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 136, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  border-color: var(--green);
+  background: var(--dark-gray);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  color: var(--green);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-label {
+  font-size: 0.9rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.contact-footer {
+  text-align: center;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0, 255, 136, 0.1);
+  color: var(--gray);
+}
+
+.contact-footer p {
+  margin: 0.5rem 0;
+}
+
+.footer-year {
+  font-size: 0.9rem;
+  color: var(--green);
+}
+
+@media (max-width: 768px) {
+  .contact-item {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-value {
+    font-size: 1rem;
+  }
+}
+
