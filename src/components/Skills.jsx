@@ -20,6 +20,10 @@ const Skills = () => {
       skills: ['Git', 'Docker', 'AWS', 'VS Code', 'IntelliJ', 'Eclipse', 'NexusIQ', 'JFrog', 'SOAP UI', 'POSTMAN']
     },
     {
+      title: 'AI Tools',
+      skills: ['Claude', 'ChatGPT (GPT)', 'Gemini', 'Cursor', 'Antigravity', 'GitHub Copilot', 'Perplexity']
+    },
+    {
       title: 'Soft Skills',
       skills: ['Bilingual Communication (English & French)', 'Sales Expertise', 'Entrepreneurial', 'Project Development']
     }

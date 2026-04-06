@@ -63,7 +63,7 @@ const Projects = () => {
             key={index}
             className="project-card"
             variants={itemVariants}
-            whileHover={{ y: -10 }}
+            whileHover={{ y: -10, rotateX: 4, rotateY: -3, scale: 1.01 }}
             transition={{ type: 'spring', stiffness: 300 }}
           >
             <div className="project-header">

@@ -4,9 +4,9 @@ import './Contact.css'
 
 const Contact = () => {
   const contactInfo = {
-    email: 'your.email@example.com', // Update with actual email
+    email: 'kneewyen9401@gmail.com',
     location: 'Montreal, QC, Canada',
-    linkedin: 'https://linkedin.com/in/yourprofile',
+    linkedin: 'https://www.linkedin.com/in/nguyenle2003/',
     github: 'https://github.com/KneewYen'
   }
 
@@ -74,6 +74,25 @@ const Contact = () => {
               <span className="contact-value">{contactInfo.location}</span>
             </div>
           </motion.div>
+
+          <motion.a
+            href={contactInfo.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item"
+            whileHover={{ scale: 1.05, x: 10 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <div className="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6 1.1 6 0 4.88 0 3.5 0 2.12 1.1 1 2.48 1c1.38 0 2.5 1.12 2.5 2.5zM.5 8h4V23h-4V8zm7 0h3.83v2.05h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-7.73c0-1.84-.03-4.21-2.57-4.21-2.58 0-2.98 2.01-2.98 4.08V23h-4V8z" />
+              </svg>
+            </div>
+            <div className="contact-details">
+              <span className="contact-label">LinkedIn</span>
+              <span className="contact-value">linkedin.com/in/nguyenle2003</span>
+            </div>
+          </motion.a>
 
           <motion.a
             href={contactInfo.github}

@@ -1,0 +1,83 @@
+.music-control {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 1200;
+  display: flex;
+  gap: 0.55rem;
+}
+
+.music-button {
+  border: 1px solid rgba(0, 255, 136, 0.35);
+  background: rgba(10, 10, 10, 0.88);
+  color: var(--white);
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(7px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.music-button:hover:not(:disabled) {
+  border-color: var(--green);
+  color: var(--green);
+  transform: translateY(-2px);
+}
+
+.music-button.playing {
+  background: rgba(0, 255, 136, 0.15);
+  color: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 0 18px rgba(0, 255, 136, 0.18);
+}
+
+.music-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.youtube-panel {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 4.3rem;
+  width: min(360px, calc(100vw - 2rem));
+  z-index: 1200;
+  border: 1px solid rgba(0, 255, 136, 0.28);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5);
+}
+
+.youtube-frame-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.youtube-frame-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .music-control {
+    right: 0.8rem;
+    bottom: 0.8rem;
+  }
+
+  .music-button {
+    font-size: 0.76rem;
+    padding: 0.58rem 0.84rem;
+  }
+
+  .youtube-panel {
+    right: 0.8rem;
+    bottom: 3.9rem;
+  }
+}

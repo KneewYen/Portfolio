@@ -1,11 +1,18 @@
 import { motion } from 'framer-motion'
 import './Experience.css'
 
+const desjardinsFallback = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='72' viewBox='0 0 220 72'><rect width='220' height='72' rx='10' fill='white'/><path d='M24 18l12-7 12 7v14l-12 7-12-7z' fill='none' stroke='%2300924f' stroke-width='5'/><text x='62' y='47' font-family='Arial' font-size='36' fill='%2300924f' font-weight='700'>Desjardins</text></svg>"
+const intactFallback = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='72' viewBox='0 0 180 72'><rect width='180' height='72' rx='10' fill='white'/><path d='M8 22h16v28H8M172 22h-16v28h16' fill='none' stroke='%23d11f2a' stroke-width='6'/><text x='38' y='48' font-family='Georgia' font-size='44' fill='%230b0b0b'>intact</text></svg>"
+
 const Experience = () => {
   const experiences = [
     {
       title: 'Software R&D Intern',
       company: 'Desjardins Group',
+      website: 'https://www.desjardins.com',
+      logo: '/logos/desjardins.png',
+      logoFallback: desjardinsFallback,
+      logoClass: 'logo-desjardins',
       location: 'Montreal, QC',
       period: 'Jan. 2025 - Expected December 2025',
       achievements: [
@@ -19,6 +26,10 @@ const Experience = () => {
     {
       title: 'Fullstack Software Engineer Intern',
       company: 'Intact Financial Corporation',
+      website: 'https://www.intactfc.com',
+      logo: '/logos/intact.png',
+      logoFallback: intactFallback,
+      logoClass: 'logo-intact',
       location: 'Toronto, ON',
       period: 'May 2025 - August 2025',
       achievements: [
@@ -79,7 +90,27 @@ const Experience = () => {
             <div className="experience-content">
               <div className="experience-header">
                 <h3 className="experience-title">{exp.title}</h3>
-                <span className="experience-company">{exp.company}</span>
+                <a
+                  className="experience-company-link"
+                  href={exp.website}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label={`Visit ${exp.company} website`}
+                >
+                  <div className="experience-company-row">
+                    <img
+                      className={`experience-company-logo ${exp.logoClass}`}
+                      src={exp.logo}
+                      alt={`${exp.company} logo`}
+                      loading="lazy"
+                      onError={(event) => {
+                        event.currentTarget.onerror = null
+                        event.currentTarget.src = exp.logoFallback
+                      }}
+                    />
+                    <span className="experience-company">{exp.company}</span>
+                  </div>
+                </a>
               </div>
               <div className="experience-meta">
                 <span className="experience-location">{exp.location}</span>

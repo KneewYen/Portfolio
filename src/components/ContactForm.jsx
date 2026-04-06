@@ -90,7 +90,7 @@ const ContactForm = () => {
         // Fallback: Use mailto if EmailJS is not configured
         const subject = encodeURIComponent(`Contact from ${formData.name}`)
         const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
-        window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`
+        window.location.href = `mailto:kneewyen9401@gmail.com?subject=${subject}&body=${body}`
         
         setStatus({
           submitting: false,
@@ -123,7 +123,7 @@ const ContactForm = () => {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'your.email@example.com' // Your email address
+          to_email: 'kneewyen9401@gmail.com'
         }
       )
 
@@ -193,7 +193,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           className="form-input"
-          placeholder="your.email@example.com"
+          placeholder="name@email.com"
           required
         />
       </div>

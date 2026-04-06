@@ -11,11 +11,12 @@
   border-radius: 8px;
   border: 1px solid rgba(0, 255, 136, 0.1);
   transition: all 0.3s ease;
+  transform-style: preserve-3d;
 }
 
 .leadership-card:hover {
   border-color: var(--green);
-  transform: translateY(-5px);
+  transform: translateY(-8px) rotateX(3deg);
   box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
 }
 

@@ -5,10 +5,21 @@ const Hero = () => {
   return (
     <div className="hero-container">
       <motion.div
-        className="hero-content"
+        className="hero-glow-orb hero-glow-left"
+        animate={{ y: [0, -18, 0], x: [0, 12, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="hero-glow-orb hero-glow-right"
+        animate={{ y: [0, 24, 0], x: [0, -16, 0] }}
+        transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="hero-content hero-tilt-panel"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        whileHover={{ rotateX: -5, rotateY: 5, z: 10 }}
       >
         <motion.h1
           className="hero-name"
@@ -25,8 +36,10 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <span className="title-line">Software Engineer</span>
-          <span className="title-accent"> & </span>
-          <span className="title-line">Full-Stack Developer</span>
+          <span className="title-accent"> • </span>
+          <span className="title-line">Vibe Coder</span>
+          <span className="title-accent"> • </span>
+          <span className="title-line">Token Maxer</span>
         </motion.div>
         <motion.p
           className="hero-description"
@@ -54,8 +67,8 @@ const Hero = () => {
       <motion.div
         className="hero-decoration"
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        animate={{ opacity: 1, scale: 1, rotate: [0, 8, 0] }}
+        transition={{ duration: 7, delay: 0.4, repeat: Infinity, ease: 'easeInOut' }}
       >
         <div className="decoration-circle"></div>
       </motion.div>

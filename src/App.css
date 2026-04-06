@@ -1,9 +1,11 @@
 .App {
   min-height: 100vh;
+  position: relative;
 }
 
 main {
   position: relative;
+  z-index: 2;
 }
 
 section {
@@ -13,6 +15,20 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.page-section {
+  transform-style: preserve-3d;
+}
+
+.app-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 255, 136, 0.1), transparent 35%),
+    radial-gradient(circle at 85% 80%, rgba(0, 204, 106, 0.08), transparent 40%);
 }
 
 @media (max-width: 768px) {
