@@ -67,11 +67,16 @@
   margin-bottom: 2rem;
   color: var(--gray);
   font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2rem 0.35rem;
+  line-height: 1.45;
 }
 
 .title-line {
-  display: inline-block;
-  margin: 0 0.5rem;
+  display: inline-flex;
+  margin: 0;
 }
 
 .title-accent {
@@ -154,6 +159,11 @@
 }
 
 @media (max-width: 768px) {
+  .hero-container {
+    min-height: 100svh;
+    padding: 1rem 0.5rem;
+  }
+
   .hero-tilt-panel {
     padding: 1.4rem;
     border-radius: 16px;
@@ -164,7 +174,7 @@
   }
 
   .hero-title {
-    font-size: 1.2rem;
+    font-size: 1.02rem;
   }
 
   .hero-description {
